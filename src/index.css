@@ -11,3 +11,70 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@media (min-width: 992px)
+{
+  .navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    justify-content: flex-end;
+}
+}
+.cus-image{
+  height: 12rem !important;
+  border-radius: 81%;
+}
+.bg-color{
+  background-color: white;
+}
+.nav-link{
+  color: dodgerblue;
+}
+.navbar-brand{
+  color: dodgerblue;
+}
+.animated{
+  animation: upto 1s ease-in-out infinite alternate-reverse both;
+}
+@-webkit-keyframes upto {
+  0%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(-10px);
+  }
+}
+@keyframes upto{
+  0%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(-10px);
+  }
+}
+.animated1{
+  animation: upup 1s ease-in-out infinite alternate-reverse both;
+}
+@-webkit-keyframes upup{
+  0%{
+    transform: translateY(3px);
+  }
+  100%{
+    transform: translateY(-10px);
+  }
+}
+@keyframes upup{
+  0%{
+    transform: translateY(3px);
+  }
+  100%{
+    transform: translateY(-10px);
+  }
+}
+/* @media (min-width:320px) and (max-width: 769px){
+  .custom-center{
+    text-align: center;
+  }
+} */
+.CustomMargin{
+  margin-top: 10rem;
+}

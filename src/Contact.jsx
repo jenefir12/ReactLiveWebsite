@@ -1,56 +1,62 @@
 import React, { useState } from 'react';
 import Footer from './Footer';
+import contact from '../src/images/contact.svg';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import PhoneIcon from '@material-ui/icons/Phone';
 
 const Contact = () =>{
-    const[text,setState] = useState({
-        fname:'',
-        email:'',
-        address:'',
-    });
-    const inputValue = (event) => {
-        const{name,value} = event.target;
-        setState((preValue) => {
-            return{
-                ...preValue,
-                [name]:value
-            }
-        });
-    }
-    const myFun = () => {
-        setState((preValue) => {
-            if(preValue.fname === ""){
-                return alert('plz fill the form');
-            }else if(preValue.email === ""){
-                return alert('plz fill the email address');
-            }else if (preValue.address === ""){
-                return alert('plz the address');
-            }else{
-                return alert ('your form is subitted');
-            }
-        });
-    }
+    // const[text,setState] = useState({
+    //     fname:'',
+    //     email:'',
+    //     address:'',
+    // });
+    // const inputValue = (event) => {
+    //     const{name,value} = event.target;
+    //     setState((preValue) => {
+    //         return{
+    //             ...preValue,
+    //             [name]:value
+    //         }
+    //     });
+    // }
+    // const myFun = () => {
+    //     setState((preValue) => {
+    //         if(preValue.fname === ""){
+    //             return alert('plz fill the form');
+    //         }else if(preValue.email === ""){
+    //             return alert('plz fill the email address');
+    //         }else if (preValue.address === ""){
+    //             return alert('plz the address');
+    //         }else{
+    //             return alert ('your form is subitted');
+    //         }
+    //     });
+    // }
     return(
         <>
-        <h3 className="text-center py-3">Contact Me</h3>
-        <div className="container" style={{paddingLeft:'14rem'}}>
-        <div className="row py-3">
-            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                <div className="d-flex">
+        <h3 className="text-center py-2">Contact Me</h3>
+        <div className="main-para mt-3 d-flex justify-content-sm-around justify-content-lg-around justify-content-md-around justify-content-xxl-around justify-content-xl-around">
+            <div className="mail-now">
+                <div className="first d-flex">
                     <MailOutlineIcon></MailOutlineIcon>
-                    <p className="px-2">bmahad083@gmail.com</p>
+                    <strong>bmahad083@gmail.com</strong>
                 </div>
             </div>
-            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-            <div className="d-flex">
+            <div className="contact-now">
+                <div className="second d-flex">
                     <PhoneIcon></PhoneIcon>
-                    <p className="px-2">+92 3186350578</p>
+                    <strong>+92 318-6350578</strong>
                 </div>
             </div>
-        </div>
         </div>
         <div className="container">
+            <div className="row">
+            <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <img src={contact} alt="image" className="mt-4 img-fluid animated text-center" style={{width:'66%',marginLeft:'12rem'}}/>
+            </div>
+            </div>
+        </div>
+        {/* <div className="container">
             <div className="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <form style={{marginBottom:'8rem'}}>
             <div className="mb-3">
@@ -72,7 +78,7 @@ const Contact = () =>{
                 <button type="submit" onClick={myFun} className="btn btn-primary">Submit</button>
             </form>
             </div>
-        </div>
+        </div> */}
         </>
     );
 }
